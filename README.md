@@ -32,6 +32,7 @@ By the end of the day, participants will have a working understanding of how to 
 
 ### Part 2: Take-Home Assignment
 After the lecture sessions, participants will work on a practical problem. They will apply the methods learned to evaluate whether and under what constraints a specific real world problem can be solved. Participants will have **2-4 weeks** to complete this assignment and will present their findings in a **presentation** during a follow-up session lasting **1-2 days** (depending on the number of participants).
+More details about the take home assignment will be given in the first class.
 
 ## Materials and Resources
 All course materials will be provided via GitHub. Prior to the seminar, participants will receive introductory slides explaining Git and GitHub, along with setup instructions to ensure everyone is well-prepared and participants can seamlessly engage with the course content.
