@@ -1,7 +1,7 @@
-# Advanced Risk Analytics in Python
+# Applied AI in Risk and Finance
 
 ## Overview
-This repository hosts the source code of the **Advanced Risk Analytics in Python** course. The course is designed to equip participants with practical skills and knowledge in the field of Artificial Intelligence (AI). Overall, the course consists of three independent modules focusing on the application of Machine Learning (ML), Natural Language Processing (NLP) and Generative AI (GenAI) within the context of quantitative risk management. As a hands-on seminar, the course will cover a range of methods and real world use cases relevant to practitioners in the field of Risk and Finance.
+This repository hosts the source code of the **Applied AI in Risk and Finance** course. The course is designed to equip participants with practical skills and knowledge in the field of Artificial Intelligence (AI). Overall, the course consists of three independent modules focusing on the application of Machine Learning (ML), Natural Language Processing (NLP) and Generative AI (GenAI) within the context of quantitative risk management. As a hands-on seminar, the course will cover a range of methods and real world use cases relevant to practitioners in the field of Risk and Finance.
 
 ## Course Structure
 
