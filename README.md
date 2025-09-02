@@ -1,7 +1,7 @@
-# Advanced Risk Analytics in Python
+# Applied AI in Risk and Finance
 
 ## Overview
-This repository hosts the source code of the **Advanced Risk Analytics in Python** course. The course is designed to equip participants with practical skills and knowledge in the field of Artificial Intelligence (AI). Overall, the course consists of three independent modules focusing on the application of Machine Learning (ML), Natural Language Processing (NLP) and Generative AI (GenAI) within the context of quantitative risk management. As a hands-on seminar, the course will cover a range of methods and real world use cases relevant to practitioners in the field of Risk and Finance.
+This repository hosts the source code of the **Applied AI in Risk and Finance** course. The course is designed to equip participants with practical skills and knowledge in the field of Artificial Intelligence (AI). Overall, the course consists of three independent modules focusing on the application of Machine Learning (ML), Natural Language Processing (NLP) and Generative AI (GenAI) within the context of quantitative risk management. As a hands-on seminar, the course will cover a range of methods and real world use cases relevant to practitioners in the field of Risk and Finance.
 
 ## Course Structure
 
@@ -33,12 +33,6 @@ By the end of the day, participants will have a working understanding of how to 
 ### Part 2: Take-Home Assignment
 After the lecture sessions, participants will work on a practical problem. They will apply the methods learned to evaluate whether and under what constraints a specific real world problem can be solved. Participants will have **2-4 weeks** to complete this assignment and will present their findings in a **presentation** during a follow-up session lasting **1-2 days** (depending on the number of participants).
 More details about the take home assignment will be given in the first class.
-
-## Materials and Resources
-All course materials will be provided via GitHub. Prior to the seminar, participants will receive introductory slides explaining Git and GitHub, along with setup instructions to ensure everyone is well-prepared and participants can seamlessly engage with the course content.
-
-## Prerequisites
-Participants should have **sound knowledge of Python programming**. This foundational skill is crucial for effectively following the course materials. Prior to enrollment of the course, students will get access to a short Python quiz which they can use as a self-assessment for their level of Python knowledge. It is generally recommended to enroll in the course only if you feel comfortable doing the quiz. Otherwise it is recommended to prepare for the course by familiarizing with Python first. A great resource is this engaging, free 2-hour crash [course](https://www.youtube.com/watch?v=K5KVEU3aaeQ) for complete beginners.
 
 ## Technical Setup
 Please follow the steps below to get started with the ccourse material:
