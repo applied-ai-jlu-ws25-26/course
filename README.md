@@ -40,28 +40,33 @@ All course materials will be provided via GitHub. Prior to the seminar, particip
 ## Prerequisites
 Participants should have **sound knowledge of Python programming**. This foundational skill is crucial for effectively following the course materials. Prior to enrollment of the course, students will get access to a short Python quiz which they can use as a self-assessment for their level of Python knowledge. It is generally recommended to enroll in the course only if you feel comfortable doing the quiz. Otherwise it is recommended to prepare for the course by familiarizing with Python first. A great resource is this engaging, free 2-hour crash [course](https://www.youtube.com/watch?v=K5KVEU3aaeQ) for complete beginners.
 
-## Technical Setup-up
+## Technical Setup
 Please follow the steps below to get started with the ccourse material:
 
-1. Make sure [python 3.12](https://www.python.org/downloads/release/python-3120/) is installed on your local machine
-2. Make also sure [git](https://git-scm.com/downloads) is installed on your local machine
-3. Clone this repository on your local machine using git
-```
-git clone https://github.com/ai-analytics-jlu-ws25-26/courses.git
-```
-4. Create a virtual environment and install required dependencies into it
-```
-python -m venv .venv
-```
-5. Activate newly created virtual environment
-```
-source .venv/Scripts/activate
-```
-6. Install all required dependencies into the newly created virtual environment
-```
-pip install -r requirements.txt
-```
+1. Install [Python 3.12](https://www.python.org/downloads/release/python-3120/) (or higher) on your local machine.
+2. Install [Git](https://git-scm.com/downloads) on your local machine.
+3. Clone the repository on your local machine using Git:
+    ```
+    git clone https://github.com/julienOlivier3/risk-analytics.git
+    ```
+4. Create a virtual environment and install required dependencies into it:
+    ```
+    python -m venv .venv
+    ```
+5. Activate the newly created virtual environment:
+    - On Windows:
+      ```
+      .venv\Scripts\activate
+      ```
+    - On macOS/Linux:
+      ```
+      source .venv/bin/activate
+      ```
+6. Install all required dependencies from the root directory:
+    ```
+    pip install -r requirements.txt
+    ```
 7. Open Jupyter Lab:
-```
-juypter lab
-```
+    ```
+    jupyter lab
+    ```
