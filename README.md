@@ -32,6 +32,7 @@ By the end of the day, participants will have a working understanding of how to 
 
 ### Part 2: Take-Home Assignment
 After the lecture sessions, participants will work on a practical problem. They will apply the methods learned to evaluate whether and under what constraints a specific real world problem can be solved. Participants will have **2-4 weeks** to complete this assignment and will present their findings in a **presentation** during a follow-up session lasting **1-2 days** (depending on the number of participants).
+More details about the take home assignment will be given in the first class.
 
 ## Technical Setup-up
 Please follow the steps below to get started with the ccourse material:
