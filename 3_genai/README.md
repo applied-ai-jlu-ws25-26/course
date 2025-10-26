@@ -2,7 +2,7 @@
 
 ## Course Overview
 
-The **Generative AI in Risk and Finance** course aims to provide participants with practical skills in applying Generative AI (GenAI) to quantitative risk management. This hands-on seminar covers various methods and use cases which bear great potential for innovation to professionals in the Risk and Finance sector.
+The **Generative AI in Risk and Finance** course aims to provide participants with practical skills in applying Generative AI (GenAI) to quantitative risk management. This hands-on course covers various GenAI concepts, tools, and practical applications.
 
 ## Key Learning Objectives
 
@@ -11,23 +11,39 @@ Participants will explore the cutting-edge field of Generative AI (GenAI) and it
 - **Retrieval-Augmented Generation** (RAG)
 - The concept of **agents**
 
-By the end of the seminar, participants will have a working understanding of how to leverage GenAI, LLMs, and RAG to create advanced tools for risk management and decision-making using popular Python frameworks such as **LlamaIndex**, **LangChain** and **LangGraph**.
+By the end of the course, participants will have a working understanding of how to leverage GenAI, LLMs, and RAG to create advanced tools for risk management and decision-making using popular Python libraries.
 
 ## Practical Application
 
-A specific use case explored in the course involves building a Multi-Document Risk Agent, a conversational AI system that allows users to interact with and extract insights from annual reports of publicly listed companies. The goal is to demonstrate how GenAI can enhance the seamless access to information for professionals in the field and should show the innovative capacity of the technology.
+A specific use case explored in the course involves building a Multi-Document Risk Agent: a conversational AI system that allows users to interact with and extract insights from annual reports of multiple companies. Participants will design and experiment with GenAI pipelines relevant to risk analytics.
 
-## Technical Setup-up
-1. Install [python](https://www.python.org/downloads/release/python-3120/) on your local machine
-1. Install [git](https://git-scm.com/downloads) on your local machine
-1. Clone the following repository on your local machine using git
-    `git clone https://github.com/julienOlivier3/risk-analytics.git`
-1. Create a virtual environment and install required dependencies into it
-    `python -m venv .venv`
-1. Activate newly created virtual environment
-    `source .venv/Scripts/activate`
-1. Install all required dependencies into the newly created virtual environment
-    `pip install -r requirements.txt`
-1. Open Jupyter Lab:
-    `juypter lab`
-1. In the folder `3_genai` you will find all course material
+## Technical Setup
+
+1. Install [Python 3.12](https://www.python.org/downloads/release/python-3120/) (or higher) on your local machine.
+2. Install [Git](https://git-scm.com/downloads) on your local machine.
+3. Clone the repository on your local machine using Git:
+    ```
+    git clone https://github.com/julienOlivier3/risk-analytics.git
+    ```
+4. Create a virtual environment and install required dependencies into it:
+    ```
+    python -m venv .venv
+    ```
+5. Activate the newly created virtual environment:
+    - On Windows:
+      ```
+      .venv\Scripts\activate
+      ```
+    - On macOS/Linux:
+      ```
+      source .venv/bin/activate
+      ```
+6. Install all required dependencies from the root directory:
+    ```
+    pip install -r requirements.txt
+    ```
+7. Open Jupyter Lab:
+    ```
+    jupyter lab
+    ```
+8. Open the notebook `genai.ipynb` and start learning.
