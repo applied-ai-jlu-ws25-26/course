@@ -15,7 +15,5 @@
 | drive | Type of drive |
 | type | Generic type of vehicle |
 | paint_color | Color of vehicle |
-| state | State in which vehicle has been listed |
+| state | State in which vehicle has been listed<br> al: Alabama<br>ak: Alaska<br>az: Arizona<br>ar: Arkansas<br>ca: California<br>co: Colorado<br>ct: Connecticut<br>dc: District of Columbia<br>de: Delaware<br>fl: Florida<br>ga: Georgia<br>hi: Hawaii<br>id: Idaho<br>il: Illinois<br>in: Indiana<br>ia: Iowa<br>ks: Kansas<br>ky: Kentucky<br>la: Louisiana<br>me: Maine<br>md: Maryland<br>ma: Massachusetts<br>mi: Michigan<br>mn: Minnesota<br>ms: Mississippi<br>mo: Missouri<br>mt: Montana<br>nc: North Carolina<br>ne: Nebraska<br>nv: Nevada<br>nj: New Jersey<br>nm: New Mexico<br>ny: New York<br>nh: New Hampshire<br>nd: North Dakota<br>oh: Ohio<br>ok: Oklahoma<br>or: Oregon<br>pa: Pennsylvania<br>ri: Rhode Island<br>sc: South Carolina<br>sd: South Dakota<br>tn: Tennessee<br>tx: Texas<br>ut: Utah<br>vt: Vermont<br>va: Virginia<br>wa: Washington<br>wv: West Virginia<br>wi: Wisconsin<br>wy: Wyoming|
 | posting_date | Date of posting the vehicle on Craigslist |
-| gdp_growth | US yearly average growth in Gross Domestic Product |
-| gscpi | Yearly average [Global Supply Chain Pressure Index](https://www.newyorkfed.org/research/policy/gscpi#/overview) |

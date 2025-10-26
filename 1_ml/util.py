@@ -35,7 +35,7 @@ def print_best_models(results: Dict[str, Dict[str, Any]], model: str) -> None:
 def plot_predictions(
         y_true: pd.Series,
         y_pred: np.ndarray,
-        title: str = 'Model Predictions vs Ground Truth',
+        title: str = 'Model Predictions vs. Ground Truth',
         color='#1eb49c') -> None:
     """
     Plots the model predictions against the ground truth values.
@@ -43,7 +43,7 @@ def plot_predictions(
     Parameters:
     y_true (pd.Series): The ground truth values.
     y_pred (np.ndarray): The predicted values from the model.
-    title (str): The title of the plot. Default is 'Decision Tree: Model Predictions vs Ground Truth'.
+    title (str): The title of the plot. Default is 'Decision Tree: Model Predictions vs. Ground Truth'.
     color (str): The color of the plot. Default is '#1eb49c'.
 
     Returns:
@@ -1091,5 +1091,6 @@ vin_to_manufacturer = {
     'MNA': 'ford',
     'MNB': 'ford',
     'MNC': 'ford',
-    'MNK': 'hino motors manufacturing thailand co ltd.'
+    'MNK': 'hino motors manufacturing thailand co ltd.',
+    'HG': 'honda'
  }
