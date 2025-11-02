@@ -1,5 +1,6 @@
 bertopic==0.17.0
 fastapi==0.115.11
+fastapi-cli==0.0.14
 fqdn==1.5.1
 gensim==4.3.3
 graphviz==0.20.3
