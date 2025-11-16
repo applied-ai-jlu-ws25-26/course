@@ -9,7 +9,8 @@ def print_vector(
         vector: Union[np.ndarray, scipy.sparse._csr.csr_matrix],
         rounding_digit: int = 1,
         string: str = "Vector:<br> ",
-        return_output: bool = False) -> str:
+        return_output: bool = False,
+        only_start_end: bool = False) -> str:
     """
     Print a formatted representation of a vector as a mathematical vector.
 
@@ -28,6 +29,9 @@ def print_vector(
         Prefix string for the output (default is "Vector:<br> ").
     return_output : bool, optional
         If True, return the formatted string instead of displaying it
+        (default is False).
+    only_start_end : bool, optional
+        If True, only display the first and last three elements of the vector
         (default is False).
 
     Returns
@@ -57,22 +61,25 @@ def print_vector(
     # Add the first three elements
     formatted_vector.extend(vector[:3].round(3))
 
-    if (len(non_zero_indices) == len(vector)) or len(non_zero_indices) == 0:
+    if only_start_end:
         formatted_vector.append("...")
     else:
-        # Add ellipsis if there are elements between the first three and the first non-zero
-        if non_zero_indices.size > 0 and non_zero_indices[0] > 3:
+        if (len(non_zero_indices) == len(vector)) or len(non_zero_indices) == 0:
             formatted_vector.append("...")
-
-        # Add non-zero elements with ellipses in between if necessary
-        for i, idx in enumerate(non_zero_indices):
-            if i > 0 and idx > non_zero_indices[i - 1] + 1:
+        else:
+            # Add ellipsis if there are elements between the first three and the first non-zero
+            if non_zero_indices.size > 0 and non_zero_indices[0] > 3:
                 formatted_vector.append("...")
-            formatted_vector.append(vector[idx].round(3))
 
-        # Add ellipsis if there are elements between the last non-zero and the last three
-        if non_zero_indices.size > 0 and non_zero_indices[-1] < dimension - 4:
-            formatted_vector.append("...")
+            # Add non-zero elements with ellipses in between if necessary
+            for i, idx in enumerate(non_zero_indices):
+                if i > 0 and idx > non_zero_indices[i - 1] + 1:
+                    formatted_vector.append("...")
+                formatted_vector.append(vector[idx].round(3))
+
+            # Add ellipsis if there are elements between the last non-zero and the last three
+            if non_zero_indices.size > 0 and non_zero_indices[-1] < dimension - 4:
+                formatted_vector.append("...")
 
     # Add the last three elements
     formatted_vector.extend(vector[-3:].round(3))
@@ -166,3 +173,39 @@ def print_sparse_vector(
         i = int(vocab_index)
         # Use f-string with left alignment to stack values
         print(f"{words[index]:<{max_word_length}} : {i:<5} \t-> {values[index]}")
+
+
+def calculate_angle(
+    embedding1: Union[np.ndarray, list[Union[float, int]]],
+    embedding2: Union[np.ndarray, list[Union[float, int]]]
+) -> float:
+    """
+    Calculate the angle between two word embeddings as a measure of similarity.
+
+    Parameters
+    ----------
+    embedding1 (np.ndarray or list of float/int): The first word embedding vector.
+    embedding2 (np.ndarray or list of float/int): The second word embedding vector.
+
+    Returns
+    -------
+    float
+        The angle in degrees between the two word embeddings.
+    """
+    if not isinstance(embedding1, np.ndarray):
+        embedding1 = np.array(embedding1)
+    if not isinstance(embedding2, np.ndarray):
+        embedding2 = np.array(embedding2)
+
+    # Calculate angle between both vectors as measure for (dis-)similarity
+    dot_product = np.dot(embedding1, embedding2)
+    norm1 = np.linalg.norm(embedding1)
+    norm2 = np.linalg.norm(embedding2)
+
+    # Calculate angle in radians
+    angle_rad = np.arccos(dot_product / (norm1 * norm2))
+
+    # Convert to degrees
+    angle_deg = np.degrees(angle_rad)
+
+    return angle_deg
