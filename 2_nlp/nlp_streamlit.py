@@ -15,7 +15,7 @@ def load_model():
 
 # Main Streamlit app
 def main():
-    st.title("Insurance Claims Clustering App 💰")
+    st.title("Insurance Claims Clustering App 🛡️")
     st.write("Upload a CSV file with claim descriptions and get associated insurance clusters!")
 
     # File uploader for CSV
@@ -26,7 +26,7 @@ def main():
 
     if uploaded_file is not None:
         # Read the uploaded CSV file
-        df_input = pd.read_csv(uploaded_file)
+        df_input = pd.read_csv(uploaded_file, delimiter=';')
         st.markdown("Uploaded Data Preview:")
         st.dataframe(df_input.head())
 

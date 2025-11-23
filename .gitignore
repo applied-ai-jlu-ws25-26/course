@@ -5,5 +5,5 @@ __pycache__/
 .ipynb_checkpoints/
 .jupyter
 contents/
-.venv
+.venv*
 solutions.md
