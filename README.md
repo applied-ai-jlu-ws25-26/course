@@ -5,9 +5,9 @@ This repository hosts the source code of the **Applied AI in Risk and Finance** 
 
 ## Course Structure
 
-### Part 1: Lecture Series
+### Part 1: Course Series
 
-#### [1. Lecture: Machine Learning and Risk Modeling](1_ml/ml.ipynb)
+#### [1. Course: Machine Learning and Risk Modeling](1_ml/ml.ipynb)
 Participants will learn key ML concepts and algorithms, including:
 - **ML pipelines**
 - **Tree-based ML algorithms** (e.g., Regression Tree, Random Forest, Gradient Boosting)
@@ -15,14 +15,14 @@ Participants will learn key ML concepts and algorithms, including:
 
 The focus will be on a step-by-step process of modeling risks and predicting future uncertain outcomes using popular Python libraries such as **scikit-learn** and **pandas**. The concrete use case looks into the uncertainty of what a leased out car can be resold at the end of the lease term, a typical risk faced by car leasing entities. The goal is to understand how machine learning can add value in assessing risks that organizations operating under uncertainty are facing.
 
-#### [2. Lecture: Natural Language Processing and Risk Clustering](2_nlp/nlp.ipynb)
+#### [2. Course: Natural Language Processing and Risk Clustering](2_nlp/nlp.ipynb)
 This session will cover NLP techniques and their evolution in recent years, including:
 - **Text Vectorization** (e.g., tf-idf, word embeddings)
 - **Text Clustering** via topic modeling
 
 Participants will explore how these techniques can enhance the processing of insurance policies and the categorization of insurance claims both of which being common use cases in the insurance industry. While the use case is specific to insurers, the techniques can be easily adapted to other use cases and industries where professionals are facing unstructured text data.
 
-#### [3. Lecture Generative AI and Risk Agents](3_genai/genai.ipynb)
+#### [3. Course: Generative AI and Risk Agents](3_genai/genai.ipynb)
 On the third day, participants will explore the cutting-edge field of Generative AI (GenAI) and its application in risk analytics. The focus will be on building a Multi-Document Risk Agent, a conversational AI system that allows users to interact with and extract insights from annual reports of publicly listed companies. This session will cover:
 - Introduction to **Generative AI** and **Large Language Models** (LLMs)
 - **Retrieval-Augmented Generation** (RAG)
