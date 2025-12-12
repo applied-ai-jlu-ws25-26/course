@@ -1,4 +1,5 @@
 bertopic==0.17.0
+faiss-cpu==1.10.0  # !!
 fastapi==0.115.11
 fastapi-cli==0.0.14
 fqdn==1.5.1
@@ -8,11 +9,14 @@ ipywidgets==8.1.5
 isoduration==20.11.0
 jsonpointer==3.0.0
 jupyterlab==4.3.3
-langchain_huggingface==0.1.2
+langchain-community==0.3.14 # !!
+langchain-core==0.3.70 # !!
+langchain-huggingface==0.3.1 # !!
 langchain_ollama==0.3.1
 langchain_openai==0.3.10
 langgraph==0.3.20
-llama_index==0.12.15
+llama_index==0.14.10
+#llama-index-embeddings-huggingface==0.5.1
 llama-index-llms-huggingface-api==0.3.1
 llama-index-llms-cohere==0.4.0
 llama-index-readers-smart-pdf-loader==0.3.0

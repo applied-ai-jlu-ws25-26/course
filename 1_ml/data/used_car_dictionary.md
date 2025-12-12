@@ -3,7 +3,7 @@
 | id | Unique listing identifier |
 | price | Entry price on Craigslist |
 | region | Craigslist region |
-| year | Model year of the vehicle. The model year is a method used by the automotive industry to categorize vehicles based on their design and features. It serves as an organizational tool to distinguish vehicles as they progress through development and production. he model year may differ from the actual year of manufacture. For example, a vehicle produced in late 2024 might be designated as a 2025 model year. This practice allows manufacturers to introduce new models and features ahead of the calendar year.  |
+| year | Model year of the vehicle. The model year is a method used by the automotive industry to categorize vehicles based on their design and features. It serves as an organizational tool to distinguish vehicles as they progress through development and production. The model year may differ from the actual year of manufacture. For example, a vehicle produced in late 2024 might be designated as a 2025 model year. This practice allows manufacturers to introduce new models and features ahead of the calendar year.  |
 | manufacturer | Manufacturer of vehicle |
 | model | Vehicle model |
 | condition | Condition of vehicle |

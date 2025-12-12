@@ -2,11 +2,11 @@ import os
 import re
 import subprocess
 from typing import Any, Dict, List, Literal, Optional, Union
-
+import torch
 import faiss
 import pandas as pd
 from IPython.display import HTML, display
-from langchain.schema import Document as LangchainDocument
+from langchain_core.documents import Document as LangchainDocument
 from langchain_community.docstore.in_memory import InMemoryDocstore
 from langchain_community.vectorstores import FAISS
 from langchain_huggingface import (HuggingFaceEmbeddings,
@@ -24,31 +24,31 @@ from llama_index.embeddings.huggingface import HuggingFaceEmbedding
 
 def print_graph_propagation(graph: CompiledStateGraph, query: str) -> None:
     """
-    Prints the propagation of events in a graph based on a user query.
-
-    Parameters:
-    graph (object): An object representing the graph from which events are streamed.
-    query (str): The user query to filter the graph events.
-
-    Returns:
-    None: This function does not return a value; it prints output directly.
+    Prints the propagation of events in a graph based on a user query,
+    highlighting node names with a grey background like markdown inline code.
     """
-
-    print(f"User query: {query}")
-    print("\n-----------------\n")
-    print("Graph events:")
+    display(HTML(f"<b>User query:</b> {query}"))
+    display(HTML("<hr>"))
+    display(HTML("<b>Agentic workflow:</b>"))
     for index, event in enumerate(graph.stream({"messages": query})):
         node = list(event.keys())[0]
         state = list(list(event.values())[0].keys())[0]
         content = str(list(list(event.values())[0].values())[0])
-        print(f"{index+1}. Node: {node}")
-        print(f"    State: {state}")
-        print(f"        Content: {content[:200]} ...")
-    print("\n-----------------\n")
+        node_html = f'<code>{node}</code>'
+        display(HTML(
+            f"<div style='margin-bottom: 8px;'>"
+            f"<b>{index+1}.</b> Node: {node_html}<br>"
+            f"&nbsp;&nbsp;&nbsp;<b>State:</b> {state}<br>"
+            f"&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>Content:</b> {content[:200]} ..."
+            f"</div>"
+        ))
+    display(HTML("<hr>"))
     try:
-        print(f"Answer: {event['generate_answer']['final_answer'][:200]} ...")
+        answer = event['generate_answer']['final_answer']
+        display(HTML(f"<b>Answer:</b> {answer}"))
     except KeyError:
-        print(f"Answer: {event['off_topic_response']['final_answer'][:200]} ...")
+        answer = event['off_topic_response']['final_answer']
+        display(HTML(f"<b>Answer:</b> {answer}"))
 
 
 def ollama_list() -> List[str]:
@@ -131,7 +131,7 @@ def get_llm_model(
 async def vectorize_chunks(
     chunks: List[Document],
     model_name: str = "Snowflake/snowflake-arctic-embed-l-v2.0",
-    device: str = 'cpu',
+    device: str = 'cuda' if torch.cuda.is_available() else 'cpu',
     inference_api: bool = True,
     huggingfacehub_api_token: Optional[str] = None
 ) -> FAISS:
