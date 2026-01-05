@@ -30,25 +30,43 @@ def print_graph_propagation(graph: CompiledStateGraph, query: str) -> None:
     display(HTML(f"<b>User query:</b> {query}"))
     display(HTML("<hr>"))
     display(HTML("<b>Agentic workflow:</b>"))
+    
     for index, event in enumerate(graph.stream({"messages": query})):
         node = list(event.keys())[0]
-        state = list(list(event.values())[0].keys())[0]
-        content = str(list(list(event.values())[0].values())[0])
+        state_dict = list(event.values())[0]  # This is a dict of all state variables returned by the node
+        
         node_html = f'<code>{node}</code>'
+        
+        # Build HTML for all state variables
+        state_html_parts = []
+        for state_key, content in state_dict.items():
+            # Convert content to string, then slice if long
+            content_str = str(content)
+            if len(content_str) > 200:
+                content_str = content_str[:200] + " ..."
+            state_html_parts.append(
+                f"&nbsp;&nbsp;&nbsp;<b>{state_key}:</b> {content_str}"
+            )
+        state_html = "<br>".join(state_html_parts)
+        
         display(HTML(
             f"<div style='margin-bottom: 8px;'>"
             f"<b>{index+1}.</b> Node: {node_html}<br>"
-            f"&nbsp;&nbsp;&nbsp;<b>State:</b> {state}<br>"
-            f"&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b>Content:</b> {content[:200]} ..."
+            f"{state_html}"
             f"</div>"
         ))
     display(HTML("<hr>"))
+    
+    # Try to display final answer from known nodes
     try:
         answer = event['generate_answer']['final_answer']
         display(HTML(f"<b>Answer:</b> {answer}"))
     except KeyError:
-        answer = event['off_topic_response']['final_answer']
-        display(HTML(f"<b>Answer:</b> {answer}"))
+        try:
+            answer = event['off_topic_response']['final_answer']
+            display(HTML(f"<b>Answer:</b> {answer}"))
+        except KeyError:
+            pass
 
 
 def ollama_list() -> List[str]:
