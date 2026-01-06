@@ -1,4 +1,6 @@
+from bertopic import BERTopic
 from IPython.display import display, HTML
+import pandas as pd
 import numpy as np
 import scipy.sparse
 import torch
@@ -209,3 +211,39 @@ def calculate_angle(
     angle_deg = np.degrees(angle_rad)
 
     return angle_deg
+
+
+def load_topic_model(
+        path: str,
+        df: pd.DataFrame,
+        column: str,
+        embedding_model="all-MiniLM-L6-v2") -> BERTopic:
+    """
+    Load a BERTopic model from the specified path and update its representative documents.
+
+    Parameters
+    ----------
+    path : str
+        The file path to the saved BERTopic model.
+    df : pd.DataFrame
+        The DataFrame containing the data used to update the model's representative documents.
+    column : str
+        The name of the column in the DataFrame containing the text data.
+    embedding_model : str, optional
+        The name of the embedding model to use for loading the BERTopic model (default is "all-MiniLM-L6-v2").
+
+    Returns
+    -------
+    BERTopic
+        The loaded BERTopic model with updated representative documents.
+    """
+
+    topic_model = BERTopic.load(path, embedding_model=embedding_model)
+    repr_docs, _, _, _ = topic_model._extract_representative_docs(
+        c_tf_idf=topic_model.c_tf_idf_,
+        documents=topic_model.get_document_info(df[column].values)[['Document', 'Topic']],
+        topics=topic_model.topic_representations_,
+        nr_repr_docs=3
+    )
+    topic_model.representative_docs_ = repr_docs
+    return topic_model
