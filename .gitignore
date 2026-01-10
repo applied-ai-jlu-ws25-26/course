@@ -1,4 +1,5 @@
-*/data/raw
+1_ml/data/raw
+2_nlp/data/raw
 __pycache__/
 .env
 .vscode
