@@ -39,7 +39,7 @@ Please follow the steps below to get started with the ccourse material:
 
 1. Install [Python 3.12](https://www.python.org/downloads/release/python-3120/) (or higher) on your local machine.
 2. Install [Git](https://git-scm.com/downloads) on your local machine.
-3. Accept the invitation to the @ai-analytics-jlu-ws25-26 organization that has been sent to you via mail (create a GitHub account if you have not done so already)
+3. Accept the invitation to the @applied-ai-jlu-ws25-26 organization that has been sent to you via mail (create a GitHub account if you have not done so already)
 4. Clone the repository on your local machine using Git:
     ```
     git clone https://github.com/julienOlivier3/risk-analytics.git
