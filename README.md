@@ -42,7 +42,7 @@ Please follow the steps below to get started with the ccourse material:
 3. Accept the invitation to the @applied-ai-jlu-ws25-26 organization that has been sent to you via mail (create a GitHub account if you have not done so already)
 4. Clone the repository on your local machine using Git:
     ```
-    git clone https://github.com/julienOlivier3/risk-analytics.git
+    git clone https://github.com/applied-ai-jlu-ws25-26/course.git
     ```
 5. Create a virtual environment and install required dependencies into it:
     ```
